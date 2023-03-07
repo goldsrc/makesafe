@@ -4,7 +4,7 @@
 [![License](https://badgen.net/github/license/goldsrc/makesafe)](./LICENSE)
 [![Package tree-shaking](https://badgen.net/bundlephobia/tree-shaking/makesafe)](https://bundlephobia.com/package/makesafe)
 [![Package minified & gzipped size](https://badgen.net/bundlephobia/minzip/makesafe)](https://bundlephobia.com/package/makesafe)
-[![Package dependency count](https://badgen.net/bundlephobia/dependency-count/reactmakesafe)](https://bundlephobia.com/package/makesafe)
+[![Package dependency count](https://badgen.net/bundlephobia/dependency-count/makesafe)](https://bundlephobia.com/package/makesafe)
 
 ## Acknowledgements
 

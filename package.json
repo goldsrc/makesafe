@@ -1,7 +1,7 @@
 {
   "name": "makesafe",
-  "version": "0.1.0",
-  "description": "",
+  "version": "0.1.1",
+  "description": "wraps the original function with error-handling logic",
   "cdn": "dist/index.umd.js",
   "main": "dist/index.js",
   "types": "types/index.d.ts",
@@ -9,6 +9,15 @@
   "module": "dist/index.esm.js",
   "jsdelivr": "dist/index.umd.js",
   "umd:main": "dist/index.umd.js",
+  "keywords": [
+    "error handling",
+    "utility",
+    "wrapper",
+    "try",
+    "catch",
+    "general purpose",
+    "guard"
+  ],
   "exports": {
     ".": [
       {
@@ -49,7 +58,6 @@
     "type": "git",
     "url": "git+https://github.com/goldsrc/makesafe.git"
   },
-  "keywords": [],
   "author": {
     "name": "Mohammad Beheshti"
   },

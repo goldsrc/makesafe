@@ -8,7 +8,7 @@
 node_modules/
 
 # NPM's shrinkwrap.
-# We're using `package-lock.json` instead.
+# We're using `yarn.lock` instead.
 npm-shrinkwrap.json
 
 # Yarn's lockfile, Plug'n'Play, folder and settings.

@@ -35,17 +35,15 @@
     "rollup-plugin-typescript2": "^0.34.1",
     "ts-jest": "^29.0.3",
     "ts-jest-resolver": "^2.0.0",
-    "typedoc": "^0.23.23",
-    "typedoc-plugin-markdown": "^3.14.0",
     "typescript": "^4.9.4"
   },
   "scripts": {
-    "doc": "typedoc src/index.ts",
     "test": "jest",
     "lint": "eslint \"*/**/*.{ts,js,json}\"",
     "lint:fix": "eslint \"*/**/*.{ts,js,json}\" --fix",
     "build": "rollup --config ./rollup.config.mjs",
-    "prepublishOnly": "npm run doc && npm run lint && npm run test && npm run build"
+    "format": "prettier . --write",
+    "prepublishOnly": "yarn lint && yarn test && yarn build"
   },
   "repository": {
     "type": "git",

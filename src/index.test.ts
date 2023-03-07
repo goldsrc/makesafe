@@ -1,16 +1,30 @@
-import { isNumberParseable } from './';
+import makeSafe from './';
 
-describe('unit | isNumberParseable', () => {
-  it('returns `true` for values parseable number', () => {
-    expect(isNumberParseable('-7.5')).toBe(true);
-    expect(isNumberParseable(false)).toBe(true);
-    expect(isNumberParseable(1892)).toBe(true);
+describe('makeSafe wrapper', () => {
+  const safeJSONParse = makeSafe(JSON.parse);
+  test('should return an object with value and ok: true if func executes without errors', () => {
+    const validJSON = `{
+      "name": "John",
+      "age": 30
+    }`;
+    expect(safeJSONParse(validJSON)).toEqual({
+      value: {
+        name: 'John',
+        age: 30,
+      },
+      ok: true,
+    });
   });
 
-  it('returns `false` for values non parseable to number', () => {
-    expect(isNumberParseable('A8sa')).toBe(false);
-    expect(isNumberParseable({})).toBe(false);
-    expect(isNumberParseable(NaN)).toBe(false);
-    expect(isNumberParseable('18L')).toBe(false);
+  test('should return an object with error and ok: false if func throws an error', () => {
+    // add a trailing comma to make the JSON invalid
+    const invalidJSON = `{
+      "name": "John",
+      "age": 30,
+    }`;
+    expect(safeJSONParse(invalidJSON)).toEqual({
+      error: expect.any(Error),
+      ok: false,
+    });
   });
 });

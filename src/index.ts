@@ -1,25 +1,50 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+export type Result<T> =
+  | {
+      ok: true;
+      value: T;
+    }
+  | {
+      ok: false;
+      error: unknown;
+    };
 /**
- * A Branded Type for values parseable to number.
- */
-export type NumberParseable = (number | string | boolean) & {
-  readonly isNumberParseble: unique symbol;
-};
-
-/**
- * Check if value is parseable to number.
+ * function wrapper that returns a Result type
  * @example
- * ```js
- * isNumberParseable('AAAA');
- * //=> false
+ * ```typescript
+ * const randomlyFail = makeSafe((input: number) => {
+ *  if (input > 0.5) {
+ *    throw new Error('oops');
+ *  }
+ *  return {
+ *    input,
+ *  };
+ * });
  *
- * isNumberParseable('100');
- * //=> true
- *
- * if (!isNumberParseable(value))
- *   throw new Error('Value can\'t be parseable to `Number`.')
- * return Number(value);
+ * const result = randomlyFail(Math.random());
+ * // result is of type Result<{ input: number }>
+ * if (result.ok) {
+ *  console.log(result.value);
+ * } else {
+ *  console.error(result.error);
+ * }
  * ```
- * @param value - An `unknown` value to be checked.
+ * @param func - a function to wrap
  */
-export const isNumberParseable = (value: unknown): value is NumberParseable =>
-  !Number.isNaN(Number(value));
+const makeSafe =
+  <TArgs extends any[], TReturn>(func: (...args: TArgs) => TReturn) =>
+  (...args: TArgs): Result<TReturn> => {
+    try {
+      return {
+        value: func(...args),
+        ok: true,
+      };
+    } catch (error) {
+      return {
+        error,
+        ok: false,
+      };
+    }
+  };
+
+export default makeSafe;

@@ -13,7 +13,6 @@ npm-shrinkwrap.json
 
 # Yarn's lockfile, Plug'n'Play, folder and settings.
 # We're using npm, and it provides its lockfile and settings.
-yarn.lock
 .pnp.*
 .yarn/
 .yarnrc
@@ -28,3 +27,7 @@ pnpmfile.js
 # Log files.
 *.log
 *.log.*
+dist/
+types/
+docs/
+

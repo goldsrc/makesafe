@@ -1,20 +1,20 @@
-# [libraryNameWithSpacesAndUpperCases]
+# MakeSafe
 
-[![Continuous Integrations](https://github.com/[repositoryOwner]/[repositoryName]/actions/workflows/continuous-integrations.yaml/badge.svg?branch=main)](https://github.com/[repositoryOwner]/[repositoryName]/actions/workflows/continuous-integrations.yaml)
-[![License](https://badgen.net/github/license/[repositoryOwner]/[repositoryName])](./LICENSE)
-[![Package tree-shaking](https://badgen.net/bundlephobia/tree-shaking/[libraryName])](https://bundlephobia.com/package/[libraryName])
-[![Package minified & gzipped size](https://badgen.net/bundlephobia/minzip/[libraryName])](https://bundlephobia.com/package/[libraryName])
-[![Package dependency count](https://badgen.net/bundlephobia/dependency-count/react[libraryName])](https://bundlephobia.com/package/[libraryName])
+[![Continuous Integrations](https://github.com/goldsrc/makesafe/actions/workflows/continuous-integrations.yaml/badge.svg?branch=main)](https://github.com/goldsrc/makesafe/actions/workflows/continuous-integrations.yaml)
+[![License](https://badgen.net/github/license/goldsrc/makesafe)](./LICENSE)
+[![Package tree-shaking](https://badgen.net/bundlephobia/tree-shaking/makesafe)](https://bundlephobia.com/package/makesafe)
+[![Package minified & gzipped size](https://badgen.net/bundlephobia/minzip/makesafe)](https://bundlephobia.com/package/makesafe)
+[![Package dependency count](https://badgen.net/bundlephobia/dependency-count/reactmakesafe)](https://bundlephobia.com/package/makesafe)
 
 ## Installation
 
 This library is published in the NPM registry and can be installed using any compatible package manager.
 
 ```sh
-npm install [libraryName] --save
+npm install makesafe --save
 
 # For Yarn, use the command below.
-yarn add [libraryName]
+yarn add makesafe
 ```
 
 ### Installation from CDN
@@ -23,14 +23,14 @@ This module has an UMD bundle available through JSDelivr and Unpkg CDNs.
 
 ```html
 <!-- For UNPKG use the code below. -->
-<script src="https://unpkg.com/[libraryName]"></script>
+<script src="https://unpkg.com/makesafe"></script>
 
 <!-- For JSDelivr use the code below. -->
-<script src="https://cdn.jsdelivr.net/npm/[libraryName]"></script>
+<script src="https://cdn.jsdelivr.net/npm/makesafe"></script>
 
 <script>
-  // UMD module is exposed through the "[libraryCamelCaseName]" global variable.
-  console.log([libraryCamelCaseName]);
+  // UMD module is exposed through the "makeSafe" global variable.
+  console.log(makeSafe);
 </script>
 ```
 

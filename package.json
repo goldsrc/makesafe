@@ -9,6 +9,13 @@
   "module": "dist/index.esm.js",
   "jsdelivr": "dist/index.umd.js",
   "umd:main": "dist/index.umd.js",
+  "files": [
+    "dist",
+    "src",
+    "types",
+    "README.md",
+    "package.json"
+  ],
   "keywords": [
     "error handling",
     "utility",
